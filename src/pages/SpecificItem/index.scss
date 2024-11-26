@@ -1,0 +1,35 @@
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+
+    .error-message-specific{
+        margin-top: 3rem;
+        margin-left: 1rem;
+        p{
+            font-size: 30px;
+            color: #ff4500;
+        }
+    }
+
+    .main-content{
+        margin-top: 2.5rem;
+        align-self: center;
+        width: 95vw;
+
+        .top-informations{
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+            p{
+                font-size: 30px;
+                font-weight: 300;
+            }
+        }
+
+        .table{
+            margin-top: 2rem;
+        }
+    }
+}

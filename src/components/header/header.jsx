@@ -1,26 +1,21 @@
-import "./header.scss"
+import "./header.scss";
 import { useEffect, useState } from "react";
 
 import { CiTempHigh } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
-export default function Header(){
-    const [home, setHome] = useState(true)
-    
-    const handleHome = (state) => {
-        setHome(state)
-    }
-
-    return(
-        <div className="header">
-            <div className="title">
-            <CiTempHigh size={24} color="#ff4500"/>
-            <p>TempView</p>
-            </div>
-
-            <div className="nav">
-                <p onClick={() => handleHome(true)} className={home == true ? "active" : ""}>Home</p>
-                <p onClick={() => handleHome(true)} className={home == false ? "active" : ""}>About Us</p>
-            </div>
+export default function Header() {
+  return (
+    <div className="header">
+      <Link
+        style={{ textDecoration: "none", color: "black", cursor: "pointer" }}
+        to="/"
+      >
+        <div className="title">
+          <CiTempHigh size={24} color="#ff4500" />
+          <p>TempView</p>
         </div>
-    )
+      </Link>
+    </div>
+  );
 }
